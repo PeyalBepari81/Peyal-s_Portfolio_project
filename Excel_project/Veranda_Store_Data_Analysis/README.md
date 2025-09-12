@@ -56,7 +56,7 @@ This project focuses on analyzing retail sales and order data from Veranda Store
 
 1. Open `Veranda Store Data Analysis.xlsx` to view the raw and processed data.
 2. Check `veranda store report.xlsx` for the summary dashboard and final insights.
-3. Open `Compare the sales and orders.docx` to see problem statement and insights 
+3. Open `Vrinda_Store_Sales_Analysis.pdf` to see problem statement and insights 
 ---
 
 ## 🧠 Potential Improvements
