@@ -64,4 +64,8 @@ This project focuses on analyzing retail sales and order data from Veranda Store
 - Integration of customer demographics for deeper insights
 - Time-series forecasting using sales trends
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/604d89ee-d254-4be9-b48d-8990e509b667" />
+## Dashboard 
+<img width="704" height="415" alt="image" src="https://github.com/user-attachments/assets/93f0cb8f-27b8-4dcc-9aab-79c1013aa1d2" />
+
+
+
