@@ -18,12 +18,7 @@ Number of Items → 8,523
 Average Rating → 3.9
 
 🖼 Dashboard Preview
-![Uploading Screenshot (1213).png…]()
-
-
-
-
-This will display your dashboard directly in the README once pushed to GitHub.
+<img width="1560" height="726" alt="Screenshot (1213)" src="https://github.com/user-attachments/assets/c510a964-b1d9-464e-981f-bf57e8b3c9ac" />
 
 📊 Dashboard Summary
 
@@ -66,12 +61,18 @@ Excel → Data cleaning & preprocessing
 Dataset → BlinkIT Grocery Sales data
 
 📂 Project Structure
-├── assets/
-│   └── dashboard.png             # Dashboard screenshot
-├── BlinkIT Grocery Data.xlsx      # Raw dataset
-├── Blinkit Analysis.docx          # Project documentation
-├── Blinkit.pbix                   # Power BI dashboard file
-└── README.md                      # Project summary
+
+assets/
+
+dashboard.png → Dashboard screenshot
+
+BlinkIT Grocery Data.xlsx → Raw dataset
+
+Blinkit Analysis.docx → Project documentation
+
+Blinkit.pbix → Power BI dashboard file
+
+README.md → Project summary
 
 🚀 Insights & Learnings
 
