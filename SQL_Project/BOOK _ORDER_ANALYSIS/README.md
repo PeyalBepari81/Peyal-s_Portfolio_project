@@ -1,6 +1,8 @@
 📚 Bookstore Data Analysis (SQL Project)
 
+
 🧾 Project Overview
+
 
 This project focuses on performing data analysis on a bookstore database that includes information about books, customers, and their purchase history.
 Using PostgreSQL, the analysis uncovers insights related to sales performance, customer behavior, genre trends, and inventory management.
@@ -8,7 +10,9 @@ Using PostgreSQL, the analysis uncovers insights related to sales performance, c
 The project demonstrates practical applications of SQL for querying, cleaning, and analyzing structured data, replicating real-world data analysis scenarios.
 
 
+
 🗂️ Project Structure
+
 
 File	Description
 BOOK_ORDER_ANALYSIS.sql	Main SQL script containing table creation, data import, and analytical queries (basic + advanced).
@@ -18,7 +22,9 @@ Orders.csv	Dataset containing purchase details, including order date, book ID, c
 Basic Queries.docx	Documentation of all query statements and outputs.
 README.md	Project overview, setup guide, and key insights.
 
+
 🧱 Database Schema
+
 
 Books Table
 Column	Type	Description
@@ -46,7 +52,9 @@ Order_Date	DATE	Date of the order
 Quantity	INT	Number of units ordered
 Total_Amount	NUMERIC(10,2)	Total order value
 
+
 ⚙️ Database Setup & Data Import
+
 
 -- Create Tables
 
@@ -84,7 +92,9 @@ CREATE TABLE Orders (
     Total_Amount NUMERIC(10, 2)
 );
 
+
 -- Import Data
+
 
 COPY Books(Book_ID, Title, Author, Genre, Published_Year, Price, Stock)
 FROM 'P:\RESOURCE\Books.csv' CSV HEADER;
@@ -97,53 +107,36 @@ FROM 'P:\RESOURCE\Orders.csv' CSV HEADER;
 
 🧠 Queries Implemented
 
-🔹 Basic Queries
 
-Retrieve all books in the “Fiction” genre
+Basic Queries 
 
-Find books published after the year 1950
+1. Retrieve all books in the "Fiction" genre 
+2. Find books published after the year 1950 
+3. List all customers from Canada 
+4. Show orders placed in November 2023 
+5. Retrieve the total stock of books available 
+6. Find the details of the most expensive book 
+7. Show all customers who ordered more than 1 quantity of a book 
+8. Retrieve all orders where the total amount exceeds $20 
+9. List all genres available in the Books table 
+10. Find the book with the lowest stock 
+11. Calculate the total revenue generated from all orders
+    
+Advance Queries
 
-List all customers from Canada
+1. Retrieve the total number of books sold for each genre 
+2. Find the average price of books in the "Fantasy" genre 
+3. List customers who have placed at least 2 orders 
+4. Find the most frequently ordered book 
+5. Show the top 3 most expensive books of 'Fantasy' genre 
+6. Retrieve the total quantity of books sold by each author 
+7. List the cities where customers who spent over $30 are located 
+8. Find the customer who spent the most on orders 
+9. Calculate the stock remaining after fulfilling all orders
 
-Show orders placed in November 2023
-
-Retrieve the total stock of books available
-
-Find details of the most expensive book
-
-Show customers who ordered more than 1 quantity
-
-Retrieve all orders where total amount exceeds $20
-
-List all genres available in the Books table
-
-Find the book with the lowest stock
-
-Calculate total revenue generated from all orders
-
-
-🔹 Advanced Queries
-
-
-Retrieve total number of books sold for each genre
-
-Find average price of books in the “Fantasy” genre
-
-List customers who have placed at least 2 orders
-
-Find the most frequently ordered book
-
-Show top 3 most expensive books in the “Fantasy” genre
-
-Retrieve total quantity of books sold by each author
-
-List cities where customers who spent over $30 are located
-
-Find the customer who spent the most on orders
-
-Calculate stock remaining after fulfilling all orders
-
+    
 📊 Key Insights from the Analysis
+
 
 Fiction and Fantasy genres showed the highest sales volumes.
 
@@ -160,7 +153,9 @@ The most frequently ordered book belonged to the Fantasy genre.
 After fulfilling all orders, roughly 70–75% of total inventory remained in stock, suggesting balanced stock management.
 
 
+
 🛠️ Technologies Used
+
 
 
 PostgreSQL – for database creation and SQL query execution
@@ -170,7 +165,9 @@ CSV Files – for structured data import
 pgAdmin / DBeaver – for managing SQL scripts and data visualization
 
 
+
 📈 Key Learnings
+
 
 
 Designed relational schemas with proper primary and foreign key constraints
@@ -182,7 +179,9 @@ Performed aggregation, joins, and filtering for business insights
 Derived actionable insights on sales, customer engagement, and inventory trends
 
 
+
 🚀 Future Enhancements
+
 
 
 Integrate with Python (Pandas) for automated analysis
@@ -191,7 +190,9 @@ Build interactive dashboards using Power BI or Tableau
 
 Implement stored procedures or triggers for real-time stock updates
 
+
 👨‍💻 Author
+
 
 Peyal Bepari
 
