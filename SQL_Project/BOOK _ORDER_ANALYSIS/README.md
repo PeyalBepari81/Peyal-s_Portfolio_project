@@ -1,4 +1,5 @@
 📚 Bookstore Data Analysis (SQL Project)
+
 🧾 Project Overview
 
 This project focuses on performing data analysis on a bookstore database that includes information about books, customers, and their purchase history.
@@ -6,7 +7,9 @@ Using PostgreSQL, the analysis uncovers insights related to sales performance, c
 
 The project demonstrates practical applications of SQL for querying, cleaning, and analyzing structured data, replicating real-world data analysis scenarios.
 
+
 🗂️ Project Structure
+
 File	Description
 BOOK_ORDER_ANALYSIS.sql	Main SQL script containing table creation, data import, and analytical queries (basic + advanced).
 Books.csv	Dataset containing book details such as title, author, genre, price, stock, and publication year.
@@ -14,7 +17,9 @@ Customers.csv	Dataset containing customer details such as name, contact informat
 Orders.csv	Dataset containing purchase details, including order date, book ID, customer ID, and total amount.
 Basic Queries.docx	Documentation of all query statements and outputs.
 README.md	Project overview, setup guide, and key insights.
+
 🧱 Database Schema
+
 Books Table
 Column	Type	Description
 Book_ID	SERIAL	Unique identifier for each book
@@ -40,9 +45,13 @@ Book_ID	INT	Linked to Books(Book_ID)
 Order_Date	DATE	Date of the order
 Quantity	INT	Number of units ordered
 Total_Amount	NUMERIC(10,2)	Total order value
+
 ⚙️ Database Setup & Data Import
+
 -- Create Tables
+
 DROP TABLE IF EXISTS Books;
+
 CREATE TABLE Books (
     Book_ID SERIAL PRIMARY KEY,
     Title VARCHAR(100),
@@ -54,6 +63,7 @@ CREATE TABLE Books (
 );
 
 DROP TABLE IF EXISTS Customers;
+
 CREATE TABLE Customers (
     Customer_ID SERIAL PRIMARY KEY,
     Name VARCHAR(100),
@@ -64,6 +74,7 @@ CREATE TABLE Customers (
 );
 
 DROP TABLE IF EXISTS Orders;
+
 CREATE TABLE Orders (
     Order_ID SERIAL PRIMARY KEY,
     Customer_ID INT REFERENCES Customers(Customer_ID),
@@ -74,6 +85,7 @@ CREATE TABLE Orders (
 );
 
 -- Import Data
+
 COPY Books(Book_ID, Title, Author, Genre, Published_Year, Price, Stock)
 FROM 'P:\RESOURCE\Books.csv' CSV HEADER;
 
@@ -84,6 +96,7 @@ COPY Orders(Order_ID, Customer_ID, Book_ID, Order_Date, Quantity, Total_Amount)
 FROM 'P:\RESOURCE\Orders.csv' CSV HEADER;
 
 🧠 Queries Implemented
+
 🔹 Basic Queries
 
 Retrieve all books in the “Fiction” genre
@@ -108,7 +121,9 @@ Find the book with the lowest stock
 
 Calculate total revenue generated from all orders
 
+
 🔹 Advanced Queries
+
 
 Retrieve total number of books sold for each genre
 
@@ -144,7 +159,9 @@ The most frequently ordered book belonged to the Fantasy genre.
 
 After fulfilling all orders, roughly 70–75% of total inventory remained in stock, suggesting balanced stock management.
 
+
 🛠️ Technologies Used
+
 
 PostgreSQL – for database creation and SQL query execution
 
@@ -152,7 +169,9 @@ CSV Files – for structured data import
 
 pgAdmin / DBeaver – for managing SQL scripts and data visualization
 
+
 📈 Key Learnings
+
 
 Designed relational schemas with proper primary and foreign key constraints
 
@@ -162,7 +181,9 @@ Performed aggregation, joins, and filtering for business insights
 
 Derived actionable insights on sales, customer engagement, and inventory trends
 
+
 🚀 Future Enhancements
+
 
 Integrate with Python (Pandas) for automated analysis
 
@@ -173,7 +194,11 @@ Implement stored procedures or triggers for real-time stock updates
 👨‍💻 Author
 
 Peyal Bepari
+
 📍 Kolkata, India
+
 🎓 M.Tech in Control System Engineering
-🔗 LinkedIn
- | GitHub Repository
+
+🔗 LinkedIn : www.linkedin.com/in/peyal-bepari-52a621181
+
+ | GitHub Repository : https://github.com/PeyalBepari81/Peyal-s_Portfolio_project
