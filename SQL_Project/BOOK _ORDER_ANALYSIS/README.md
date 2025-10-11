@@ -175,5 +175,7 @@ Implement stored procedures or triggers for real-time stock updates
 Peyal Bepari
 📍 Kolkata, India
 🎓 M.Tech in Control System Engineering
+
 🔗 LinkedIn : www.linkedin.com/in/peyal-bepari-52a621181
+
  | GitHub Repository
