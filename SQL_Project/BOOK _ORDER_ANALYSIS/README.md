@@ -6,6 +6,7 @@ Using PostgreSQL, the analysis uncovers insights related to sales performance, c
 
 The project demonstrates practical applications of SQL for querying, cleaning, and analyzing structured data, replicating real-world data analysis scenarios.
 
+
 🗂️ Project Structure
 File	Description
 BOOK_ORDER_ANALYSIS.sql	Main SQL script containing table creation, data import, and analytical queries (basic + advanced).
@@ -14,6 +15,8 @@ Customers.csv	Dataset containing customer details such as name, contact informat
 Orders.csv	Dataset containing purchase details, including order date, book ID, customer ID, and total amount.
 Basic Queries.docx	Documentation of all query statements and outputs.
 README.md	Project overview, setup guide, and key insights.
+
+
 🧱 Database Schema
 Books Table
 Column	Type	Description
@@ -40,6 +43,8 @@ Book_ID	INT	Linked to Books(Book_ID)
 Order_Date	DATE	Date of the order
 Quantity	INT	Number of units ordered
 Total_Amount	NUMERIC(10,2)	Total order value
+
+
 ⚙️ Database Setup & Data Import
 -- Create Tables
 DROP TABLE IF EXISTS Books;
@@ -83,6 +88,7 @@ FROM 'P:\RESOURCE\Customers.csv' CSV HEADER;
 COPY Orders(Order_ID, Customer_ID, Book_ID, Order_Date, Quantity, Total_Amount)
 FROM 'P:\RESOURCE\Orders.csv' CSV HEADER;
 
+
 🧠 Queries Implemented
 🔹 Basic Queries
 
@@ -107,6 +113,8 @@ List all genres available in the Books table
 Find the book with the lowest stock
 
 Calculate total revenue generated from all orders
+
+
 
 🔹 Advanced Queries
 
@@ -152,6 +160,8 @@ CSV Files – for structured data import
 
 pgAdmin / DBeaver – for managing SQL scripts and data visualization
 
+
+
 📈 Key Learnings
 
 Designed relational schemas with proper primary and foreign key constraints
@@ -162,6 +172,8 @@ Performed aggregation, joins, and filtering for business insights
 
 Derived actionable insights on sales, customer engagement, and inventory trends
 
+
+
 🚀 Future Enhancements
 
 Integrate with Python (Pandas) for automated analysis
@@ -169,6 +181,8 @@ Integrate with Python (Pandas) for automated analysis
 Build interactive dashboards using Power BI or Tableau
 
 Implement stored procedures or triggers for real-time stock updates
+
+
 
 👨‍💻 Author
 
