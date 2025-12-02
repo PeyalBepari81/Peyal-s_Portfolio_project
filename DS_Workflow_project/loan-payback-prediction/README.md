@@ -3,6 +3,7 @@
 This project predicts whether a loan applicant will repay the loan or default, based on financial and demographic features.
 The workflow covers end-to-end Data Science and Machine Learning, including EDA, preprocessing, class imbalance handling, model training, hyperparameter tuning (Randomized Search), and model comparison.
 
+
 ***📌 Key Highlights of the Project***
 
 ✔ Full Data Science Workflow
@@ -12,6 +13,7 @@ The workflow covers end-to-end Data Science and Machine Learning, including EDA,
 ✔ Performance comparison using Accuracy, Precision, Recall, F1-Score & ROC–AUC
 ✔ Final conclusion and best model selection
 
+
 ***📂 Dataset***
 
 The project uses the Kaggle Playground Series – Season 5 Episode 11 dataset:
@@ -19,6 +21,7 @@ The project uses the Kaggle Playground Series – Season 5 Episode 11 dataset:
 
 ⚠ Due to GitHub file size restrictions, the dataset is not uploaded to this repository.
 Please download it from Kaggle and place it in your working directory before running the notebook.
+
 
 ***🧠 Project Workflow***
 
@@ -49,9 +52,11 @@ Random Forest	✔	Completed
 XGBoost	✔	Completed
 CatBoost	✔	Completed (Best Model)
 
+
 ***🏆 Best Performing Model***
 
 After training and tuning all models, CatBoost delivered the highest performance, with balanced precision and recall — ideal for reducing false negatives in loan default prediction.
+
 
 ***📦 Model File Notice***
 
@@ -78,6 +83,7 @@ def make_prediction(df, model):
     preds = model.predict(X)
     return pd.DataFrame({'id': ids, 'prediction': preds})
 
+
 ***🚀 How to Run This Project***
 pip install -r requirements.txt
 jupyter notebook
@@ -86,6 +92,7 @@ jupyter notebook
 Then open:
 
 notebook/loan_payback.ipynb
+
 
 ***📊 Results Summary (Short)***
 
@@ -99,6 +106,8 @@ AUC score comparison
 
 Key strengths of each model
 
+
+
 ***🔮 Future Improvements***
 
 Probability calibration for better risk scoring
@@ -108,10 +117,12 @@ Deployment using FastAPI / Streamlit
 Feature selection to further reduce overfitting
 
 
+
 ***👤 Author — Peyal Bepari  
 M.Tech (Control Systems, Jadavpur University — First Class with Distinction)  
 B.E (Electronics & Instrumentation, Jadavpur University — Honors, First Class Distinction)  
 Passionate about Data Science, ML & AI***
+
 
 
 ***⭐ If you find this project helpful, consider giving the repository a star!***
