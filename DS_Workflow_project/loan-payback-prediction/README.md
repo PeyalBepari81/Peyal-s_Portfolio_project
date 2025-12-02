@@ -48,6 +48,7 @@ Logistic Regression	✔	Completed
 Random Forest	✔	Completed
 XGBoost	✔	Completed
 CatBoost	✔	Completed (Best Model)
+
 ***🏆 Best Performing Model***
 
 After training and tuning all models, CatBoost delivered the highest performance, with balanced precision and recall — ideal for reducing false negatives in loan default prediction.
