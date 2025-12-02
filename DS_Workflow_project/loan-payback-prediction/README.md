@@ -106,10 +106,11 @@ Deployment using FastAPI / Streamlit
 
 Feature selection to further reduce overfitting
 
-👤 Author
 
-Peyal Bepari
-Master’s Student — Control Systems Engineering
-Deep interest in Data Science, Machine Learning, and AI
+👤 Author — Peyal Bepari  
+M.Tech (Control Systems, Jadavpur University — First Class with Distinction)  
+B.E (Electronics & Instrumentation, Jadavpur University — Honors, First Class Distinction)  
+Passionate about Data Science, ML & AI
+
 
 ⭐ If you find this project helpful, consider giving the repository a star!
