@@ -85,9 +85,13 @@ Add the id column back after prediction (if required)
 
 🧪 Example Prediction Function
 def make_prediction(df, model):
+
     ids = df['id']
+    
     X = df.drop('id', axis=1)
+    
     preds = model.predict(X)
+    
     return pd.DataFrame({'id': ids, 'prediction': preds})
 
 ▶ How to Run This Project
