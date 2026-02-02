@@ -1,87 +1,96 @@
-** Loan Payback Prediction — A Complete Machine Learning Workflow**
+# 🏦 Loan Payback Prediction — End-to-End Machine Learning Project
 
-This project predicts whether a loan applicant will repay the loan or default, based on financial and demographic features.
-The workflow covers end-to-end Data Science and Machine Learning, including EDA, preprocessing, class imbalance handling, model training, hyperparameter tuning (Randomized Search), and model comparison.
+This project predicts whether a loan applicant will **repay the loan or default**, using financial and demographic features.  
+It demonstrates a **complete end-to-end Data Science & Machine Learning workflow**, from data exploration to model selection and evaluation.
 
+---
 
-*** Key Highlights of the Project***
+## 🚀 Project Highlights
 
-✔ Full Data Science Workflow
-✔ Multiple ML models tested and tuned
-✔ RandomizedSearchCV for hyperparameter tuning
-✔ SMOTE applied to handle class imbalance
-✔ Performance comparison using Accuracy, Precision, Recall, F1-Score & ROC–AUC
-✔ Final conclusion and best model selection
+- Complete Data Science & ML workflow  
+- Extensive Exploratory Data Analysis (EDA)  
+- Data preprocessing & feature engineering  
+- Handling class imbalance using **SMOTE**  
+- Multiple ML models trained and tuned  
+- Hyperparameter tuning using **RandomizedSearchCV**  
+- Model evaluation using **Accuracy, Precision, Recall, F1-score & ROC–AUC**  
+- Final model comparison and best model selection  
 
+---
 
-*** Dataset***
+## 📂 Dataset
 
-The project uses the Kaggle Playground Series – Season 5 Episode 11 dataset:
+**Kaggle Playground Series – Season 5 Episode 11**
+
 🔗 https://www.kaggle.com/competitions/playground-series-s5e11
 
-⚠ Due to GitHub file size restrictions, the dataset is not uploaded to this repository.
-Please download it from Kaggle and place it in your working directory before running the notebook.
+⚠ **Note:**  
+Due to GitHub file size restrictions, the dataset is **not included** in this repository.
 
+Please download the dataset from Kaggle and place it in your working directory before running the notebook.
 
-*** Project Workflow***
+---
 
-Importing Libraries & Understanding the Dataset
+## 🧠 Project Workflow
 
-Exploratory Data Analysis (EDA)
+1. Importing Libraries & Understanding the Dataset  
+2. Exploratory Data Analysis (EDA)  
+3. Data Cleaning & Preprocessing  
+4. Feature Engineering  
+5. Train–Test Split  
+6. Handling Class Imbalance using **SMOTE**  
+7. Model Training  
+8. Hyperparameter Tuning using **RandomizedSearchCV**  
+9. Model Evaluation & Comparison  
+10. Final Conclusion  
 
-Data Cleaning & Preprocessing
+---
 
-Feature Engineering
+## 🔍 Machine Learning Models Implemented
 
-Train–Test Split
+| Model                | Hyperparameter Tuning | Status        |
+|---------------------|----------------------|---------------|
+| Logistic Regression | ✔                    | Completed     |
+| Random Forest       | ✔                    | Completed     |
+| XGBoost             | ✔                    | Completed     |
+| CatBoost            | ✔                    | Best Model    |
 
-Handling Class Imbalance using SMOTE
+---
 
-Model Training
+## 🏆 Best Performing Model
 
-Hyperparameter Tuning using RandomizedSearchCV
+After training and tuning all models, **CatBoost** achieved the best overall performance with a strong balance between **precision and recall**, making it ideal for reducing **false negatives** in loan default prediction.
 
-Model Evaluation & Comparison
+---
 
-Final Conclusion
+## 📦 Model File Notice
 
-***🔍 Machine Learning Models Implemented***
-Model	Tuning	Status
-Logistic Regression	✔	Completed
-Random Forest	✔	Completed
-XGBoost	✔	Completed
-CatBoost	✔	Completed (Best Model)
+⚠ The **Random Forest pickle file** could not be uploaded due to GitHub size limitations.
 
+You can recreate it by running the notebook.  
+All tuned hyperparameters are already included.
 
-*** Best Performing Model***
+---
 
-After training and tuning all models, CatBoost delivered the highest performance, with balanced precision and recall — ideal for reducing false negatives in loan default prediction.
+## ❗ Important Note for Making Predictions
 
+The dataset contains an **`id` column** that must **NOT** be used during model training or prediction.
 
-*** Model File Notice***
+### Recommended Prediction Workflow
 
-⚠ The Random Forest saved pickle file could not be uploaded due to GitHub size limits.
-You can recreate it by running the notebook; the hyperparameters used during tuning are already included.
+- Drop the `id` column  
+- Pass remaining features to the trained model  
+- Add the `id` column back after prediction (if required)
 
-❗ Important Note for Users Who Want to Run Predictions
+### Example Prediction Function
 
-The dataset contains an id column that should not be used during model training or prediction.
-
-When making predictions:
-
-Drop the id column
-
-Pass remaining features to the trained model
-
-After prediction, add the id column back if required
-
-Example recommendation for prediction function:
-
+```python
 def make_prediction(df, model):
     ids = df['id']
     X = df.drop('id', axis=1)
     preds = model.predict(X)
     return pd.DataFrame({'id': ids, 'prediction': preds})
+
 
 
 *** How to Run This Project***
