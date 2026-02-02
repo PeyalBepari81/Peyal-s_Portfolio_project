@@ -82,56 +82,47 @@ The dataset contains an **`id` column** that must **NOT** be used during model t
 - Pass remaining features to the trained model  
 - Add the `id` column back after prediction (if required)
 
-### Example Prediction Function
+## 🧪 Example Prediction Function
 
-
+```python
 def make_prediction(df, model):
     ids = df['id']
     X = df.drop('id', axis=1)
     preds = model.predict(X)
     return pd.DataFrame({'id': ids, 'prediction': preds})
-
-
-
-*** How to Run This Project***
+▶ How to Run This Project
+Install dependencies
 pip install -r requirements.txt
+Launch Jupyter Notebook
 jupyter notebook
-
-
-Then open:
-
+Open the notebook
 notebook/loan_payback.ipynb
-
-
-***📊 Results Summary (Short)***
-
+📊 Results Summary
 The complete performance comparison table is included in the notebook, along with:
 
-Confusion matrix
+Confusion Matrix
 
-Classification report
+Classification Report
 
-AUC score comparison
+ROC–AUC score comparison
 
-Key strengths of each model
+Key strengths and weaknesses of each model
 
-
-
-*** Future Improvements***
-
+🔮 Future Improvements
 Probability calibration for better risk scoring
 
-Deployment using FastAPI / Streamlit
+Deployment using FastAPI or Streamlit
 
 Feature selection to further reduce overfitting
 
+👤 Author
+Peyal Bepari
 
+M.Tech (Control Systems) — Jadavpur University
+First Class with Distinction
 
-*** Author — Peyal Bepari  
-M.Tech (Control Systems, Jadavpur University — First Class with Distinction)  
-B.E (Electronics & Instrumentation, Jadavpur University — Honors, First Class Distinction)  
-Passionate about Data Science, ML & AI***
+B.E. (Electronics & Instrumentation Engineering) — Jadavpur University
+Honors, First Class with Distinction
 
+💡 Passionate about Data Science, Machine Learning & AI
 
-
-*** If you find this project helpful, consider giving the repository a star!***
