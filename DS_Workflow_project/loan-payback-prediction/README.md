@@ -1,10 +1,10 @@
-**🏦 Loan Payback Prediction — A Complete Machine Learning Workflow**
+** Loan Payback Prediction — A Complete Machine Learning Workflow**
 
 This project predicts whether a loan applicant will repay the loan or default, based on financial and demographic features.
 The workflow covers end-to-end Data Science and Machine Learning, including EDA, preprocessing, class imbalance handling, model training, hyperparameter tuning (Randomized Search), and model comparison.
 
 
-***📌 Key Highlights of the Project***
+*** Key Highlights of the Project***
 
 ✔ Full Data Science Workflow
 ✔ Multiple ML models tested and tuned
@@ -14,7 +14,7 @@ The workflow covers end-to-end Data Science and Machine Learning, including EDA,
 ✔ Final conclusion and best model selection
 
 
-***📂 Dataset***
+*** Dataset***
 
 The project uses the Kaggle Playground Series – Season 5 Episode 11 dataset:
 🔗 https://www.kaggle.com/competitions/playground-series-s5e11
@@ -23,7 +23,7 @@ The project uses the Kaggle Playground Series – Season 5 Episode 11 dataset:
 Please download it from Kaggle and place it in your working directory before running the notebook.
 
 
-***🧠 Project Workflow***
+*** Project Workflow***
 
 Importing Libraries & Understanding the Dataset
 
@@ -53,12 +53,12 @@ XGBoost	✔	Completed
 CatBoost	✔	Completed (Best Model)
 
 
-***🏆 Best Performing Model***
+*** Best Performing Model***
 
 After training and tuning all models, CatBoost delivered the highest performance, with balanced precision and recall — ideal for reducing false negatives in loan default prediction.
 
 
-***📦 Model File Notice***
+*** Model File Notice***
 
 ⚠ The Random Forest saved pickle file could not be uploaded due to GitHub size limits.
 You can recreate it by running the notebook; the hyperparameters used during tuning are already included.
@@ -84,7 +84,7 @@ def make_prediction(df, model):
     return pd.DataFrame({'id': ids, 'prediction': preds})
 
 
-***🚀 How to Run This Project***
+*** How to Run This Project***
 pip install -r requirements.txt
 jupyter notebook
 
@@ -108,7 +108,7 @@ Key strengths of each model
 
 
 
-***🔮 Future Improvements***
+*** Future Improvements***
 
 Probability calibration for better risk scoring
 
@@ -118,11 +118,11 @@ Feature selection to further reduce overfitting
 
 
 
-***👤 Author — Peyal Bepari  
+*** Author — Peyal Bepari  
 M.Tech (Control Systems, Jadavpur University — First Class with Distinction)  
 B.E (Electronics & Instrumentation, Jadavpur University — Honors, First Class Distinction)  
 Passionate about Data Science, ML & AI***
 
 
 
-***⭐ If you find this project helpful, consider giving the repository a star!***
+*** If you find this project helpful, consider giving the repository a star!***
