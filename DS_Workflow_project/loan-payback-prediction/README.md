@@ -84,6 +84,7 @@ Pass the remaining features to the trained model
 Add the id column back after prediction (if required)
 
 🧪 Example Prediction Function
+
 def make_prediction(df, model):
 
     ids = df['id']
