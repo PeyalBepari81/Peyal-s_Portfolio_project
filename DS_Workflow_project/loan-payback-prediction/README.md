@@ -3,7 +3,9 @@
 This project predicts whether a loan applicant will repay the loan or default, using financial and demographic features.
 It demonstrates a complete end-to-end Data Science & Machine Learning workflow, from data exploration to model selection and evaluation.
 
+
 **🚀 Project Highlights**
+
 
 Complete Data Science & Machine Learning workflow
 
@@ -21,7 +23,9 @@ Model evaluation using Accuracy, Precision, Recall, F1-score, and ROC–AUC
 
 Final model comparison and best model selection
 
+
 **📂 Dataset**
+
 
 Kaggle Playground Series – Season 5 Episode 11
 
@@ -33,6 +37,7 @@ Due to GitHub file size restrictions, the dataset is not included in this reposi
 Please download the dataset from Kaggle and place it in your working directory before running the notebook.
 
 **🧠 Project Workflow**
+
 
 Importing libraries and understanding the dataset
 
@@ -55,6 +60,8 @@ Model evaluation and comparison
 Final conclusion
 
 **🔍 Machine Learning Models Implemented**
+
+
 Model	Hyperparameter Tuning	Status
 Logistic Regression	✔	Completed
 Random Forest	✔	Completed
@@ -108,6 +115,7 @@ notebook/loan_payback.ipynb
 
 **📊 Results Summary**
 
+
 The complete performance comparison table is included in the notebook, along with:
 
 Confusion Matrix
@@ -120,6 +128,7 @@ Key strengths and weaknesses of each model
 
 **🔮 Future Improvements**
 
+
 Probability calibration for better risk scoring
 
 Deployment using FastAPI or Streamlit
@@ -127,6 +136,7 @@ Deployment using FastAPI or Streamlit
 Feature selection to further reduce overfitting
 
 **👤 Author**
+
 
 Peyal Bepari
 
