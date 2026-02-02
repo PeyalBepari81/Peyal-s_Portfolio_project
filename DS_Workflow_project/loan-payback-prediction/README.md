@@ -84,7 +84,7 @@ The dataset contains an **`id` column** that must **NOT** be used during model t
 
 ### Example Prediction Function
 
-```python
+
 def make_prediction(df, model):
     ids = df['id']
     X = df.drop('id', axis=1)
