@@ -106,19 +106,51 @@ Ferns and Petals Sales Analysis.xlsx → Excel dashboard with data & visualizati
 <img width="1406" height="594" alt="Dashboard (2)" src="https://github.com/user-attachments/assets/b64ccaa7-a624-4595-b9e4-e6a41dcc3c8c" />
 
 
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -126,10 +158,11 @@ Ferns and Petals Sales Analysis.xlsx → Excel dashboard with data & visualizati
 👤 Author
 
 Peyal Bepari
-🎓 Master’s Student in Control Systems Engineering
 
-🎓 Bachelor’s in Electronics and Instrumentation Engineering
+🎓 Master’s Student in Control Systems Engineering (Jadavpur University)
 
-📊 Aspiring Data Analyst / Data Scientist
+🎓 Bachelor’s in Electronics and Instrumentation Engineering  (Jadavpur University)
+
+📊 Aspiring  Data Scientist
 
 📍 India
