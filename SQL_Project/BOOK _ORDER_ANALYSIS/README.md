@@ -1,7 +1,8 @@
-📚 Bookstore Data Analysis (SQL Project)
+**📚 Bookstore Data Analysis (SQL Project)**
+---
 
 
-🧾 Project Overview
+**🧾 Project Overview**
 
 
 This project focuses on performing data analysis on a bookstore database that includes information about books, customers, and their purchase history.
@@ -11,7 +12,7 @@ The project demonstrates practical applications of SQL for querying, cleaning, a
 
 
 
-🗂️ Project Structure
+**🗂️ Project Structure**
 
 
 File	Description
@@ -23,7 +24,8 @@ Basic Queries.docx	Documentation of all query statements and outputs.
 README.md	Project overview, setup guide, and key insights.
 
 
-🧱 Database Schema
+
+**🧱 Database Schema**
 
 
 Books Table
@@ -53,7 +55,9 @@ Quantity	INT	Number of units ordered
 Total_Amount	NUMERIC(10,2)	Total order value
 
 
-⚙️ Database Setup & Data Import
+
+
+**⚙️ Database Setup & Data Import**
 
 
 -- Create Tables
@@ -105,7 +109,9 @@ FROM 'P:\RESOURCE\Customers.csv' CSV HEADER;
 COPY Orders(Order_ID, Customer_ID, Book_ID, Order_Date, Quantity, Total_Amount)
 FROM 'P:\RESOURCE\Orders.csv' CSV HEADER;
 
-🧠 Queries Implemented
+
+
+**🧠 Queries Implemented**
 
 
 Basic Queries 
@@ -122,7 +128,10 @@ Basic Queries
 10. Find the book with the lowest stock 
 11. Calculate the total revenue generated from all orders
     
-Advance Queries
+
+
+**Advance Queries**
+
 
 1. Retrieve the total number of books sold for each genre 
 2. Find the average price of books in the "Fantasy" genre 
@@ -135,7 +144,9 @@ Advance Queries
 9. Calculate the stock remaining after fulfilling all orders
 
     
-📊 Key Insights from the Analysis
+
+    
+**📊 Key Insights from the Analysis**
 
 
 Fiction and Fantasy genres showed the highest sales volumes.
@@ -154,7 +165,7 @@ After fulfilling all orders, roughly 70–75% of total inventory remained in sto
 
 
 
-🛠️ Technologies Used
+**🛠️ Technologies Used**
 
 
 
@@ -166,7 +177,7 @@ pgAdmin / DBeaver – for managing SQL scripts and data visualization
 
 
 
-📈 Key Learnings
+**📈 Key Learnings**
 
 
 
@@ -180,7 +191,7 @@ Derived actionable insights on sales, customer engagement, and inventory trends
 
 
 
-🚀 Future Enhancements
+**🚀 Future Enhancements**
 
 
 
@@ -191,14 +202,14 @@ Build interactive dashboards using Power BI or Tableau
 Implement stored procedures or triggers for real-time stock updates
 
 
-👨‍💻 Author
 
 
-Peyal Bepari
-
-📍 Kolkata, India
-
-🎓 M.Tech in Control System Engineering
+## Author
+Peyal Bepari  
+Master’s Student – Control Systems Engineering (Jadavpur University)
+Bachelor’s in Electronics and Instrumentation Engineering (Jadavpur University)  
+Aspiring Data Analyst / Data Scientist  
+India
 
 🔗 LinkedIn : www.linkedin.com/in/peyal-bepari-52a621181
 
