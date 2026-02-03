@@ -1,10 +1,14 @@
-📊 Ferns and Petals Sales Analysis Dashboard
-🔎 Project Overview
+                    **📊 Ferns and Petals Sales Analysis Dashboard**
+
+                    
+**🔎 Project Overview**
 
 This project presents an interactive Sales Analysis Dashboard built in Excel to analyze sales data from Ferns and Petals (FNP). The dataset includes customer orders, products, occasions, and delivery details.
 The goal is to uncover sales trends, customer behavior, and product performance while helping the company optimize strategies.
 
-📂 Dataset
+
+
+**📂 Dataset**
 
 The dataset contains order-level details including:
 
@@ -14,13 +18,17 @@ Order Quantity, Delivery Time, Revenue
 
 Occasion (Diwali, Holi, Raksha Bandhan, Valentine’s Day, Birthdays, Anniversaries, etc.)
 
-🛠 Tools & Technologies
+
+
+**🛠 Tools & Technologies**
 
 Microsoft Excel (Pivot Tables, Slicers, Charts, Conditional Formatting)
 
 Interactive Dashboard Design for real-time analysis
 
-📈 Key Features of Dashboard
+
+
+**📈 Key Features of Dashboard**
 
 KPIs at a Glance:
 
@@ -50,7 +58,9 @@ Interactivity:
 
 Slicers for filtering by Products, Dates, Occasions, Quarters
 
-💡 Insights
+
+
+**💡 Insights**
 
 Sales spike during festivals & special occasions
 
@@ -60,7 +70,9 @@ Average delivery efficiency (5.53 hrs) shows strong operational performance
 
 Occasion-based revenue helps in targeted marketing campaigns
 
-🚀 Outcome
+
+
+**🚀 Outcome**
 
 The dashboard provides a comprehensive, data-driven view of sales performance, enabling:
 
@@ -72,7 +84,9 @@ Optimization of delivery operations
 
 Enhanced business strategies
 
-📂 Project Files
+
+**📂 Project Files**
+
 
 📊 Project Summary.pdf → Overview of the dashboard & findings
 
@@ -80,5 +94,23 @@ Ferns and Petals Sales Analysis.pdf → Problem statement & business questions
 
 Ferns and Petals Sales Analysis.xlsx → Excel dashboard with data & visualizations
 
-📸 Dashboard Preview
+
+**📸 Dashboard Preview**
+
+
 <img width="1406" height="594" alt="Dashboard (2)" src="https://github.com/user-attachments/assets/b64ccaa7-a624-4595-b9e4-e6a41dcc3c8c" />
+
+
+
+
+
+
+
+👤 Author
+
+Peyal Bepari
+🎓 Master’s Student in Control Systems Engineering
+🎓 Bachelor’s in Electronics and Instrumentation Engineering
+
+📊 Aspiring Data Analyst / Data Scientist
+📍 India
