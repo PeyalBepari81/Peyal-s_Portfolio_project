@@ -1,4 +1,11 @@
+  **Blinkit’s Sales Performance**
+---
+
+
+
 **📌 Project Overview**
+
+
 
 This project analyzes Blinkit’s sales performance, customer satisfaction, and inventory distribution using Power BI.
 The dashboard provides insights into key KPIs, item categories, outlet performance, and location-based sales trends, helping identify growth opportunities and optimization areas.
