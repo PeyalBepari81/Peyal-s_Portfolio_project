@@ -1,9 +1,13 @@
-📌 Project Overview
+**📌 Project Overview**
 
 This project analyzes Blinkit’s sales performance, customer satisfaction, and inventory distribution using Power BI.
 The dashboard provides insights into key KPIs, item categories, outlet performance, and location-based sales trends, helping identify growth opportunities and optimization areas.
 
-🎯 Business Requirement
+
+
+**🎯 Business Requirement**
+
+
 
 To conduct a comprehensive analysis of Blinkit's data and identify key insights & opportunities for optimization through KPIs and visualizations.
 
@@ -17,10 +21,18 @@ Number of Items → 8,523
 
 Average Rating → 3.9
 
-🖼 Dashboard Preview
+**🖼 Dashboard Preview**
+
+
+
 <img width="1560" height="726" alt="Screenshot (1213)" src="https://github.com/user-attachments/assets/c510a964-b1d9-464e-981f-bf57e8b3c9ac" />
 
-📊 Dashboard Summary
+
+
+
+**📊 Dashboard Summary**
+
+
 
 Total Sales: $1M across 8,523 items with an average rating of 3.9.
 
@@ -36,7 +48,12 @@ Outlet Type: Supermarket Type 1 generates the highest revenue.
 
 Outlet Location: Tier 3 cities lead in sales, followed by Tier 2 and Tier 1.
 
-📈 Dashboard Features & Visualizations
+
+
+
+**📈 Dashboard Features & Visualizations**
+
+
 
 Total Sales by Fat Content → Donut Chart
 
@@ -52,7 +69,11 @@ Sales by Outlet Location → Funnel Map
 
 All Metrics by Outlet Type → Matrix Card
 
-🛠 Tools & Technologies
+
+
+**🛠 Tools & Technologies**
+
+
 
 Power BI → Data visualization & dashboard creation
 
@@ -60,7 +81,10 @@ Excel → Data cleaning & preprocessing
 
 Dataset → BlinkIT Grocery Sales data
 
-📂 Project Structure
+
+
+**📂 Project Structure**
+
 
 assets/
 
@@ -74,7 +98,11 @@ Blinkit.pbix → Power BI dashboard file
 
 README.md → Project summary
 
-🚀 Insights & Learnings
+
+
+**🚀 Insights & Learnings**
+
+
 
 Fat content and item type strongly affect sales distribution.
 
@@ -84,11 +112,28 @@ Tier 3 cities show strong demand, offering expansion opportunities.
 
 Customer ratings remain consistent across outlet categories.
 
-📌 Future Enhancements
+
+
+**📌 Future Enhancements**
+
 
 Add time-series forecasting for sales prediction.
 
 Perform customer segmentation for targeted strategies.
 
 Build interactive drill-through reports in Power BI.
+
+
+
+
+
+
+
+
+## Author
+Peyal Bepari  
+Master’s Student – Control Systems Engineering (Jadavpur University)
+Bachelor’s in Electronics and Instrumentation Engineering (Jadavpur University)  
+Aspiring Data Analyst / Data Scientist  
+India
 
