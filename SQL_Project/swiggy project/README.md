@@ -53,3 +53,22 @@ The dataset includes:
 - Strategic areas for new restaurant openings based on ratings and competition
 
 
+
+
+
+
+## Author
+Peyal Bepari  
+Master’s Student – Control Systems Engineering (Jadavpur University)
+
+Bachelor’s in Electronics and Instrumentation Engineering (Jadavpur University)  
+
+
+Aspiring  Data Scientist  
+India
+
+🔗 LinkedIn : www.linkedin.com/in/peyal-bepari-52a621181
+
+ | GitHub Repository : https://github.com/PeyalBepari81/Peyal-s_Portfolio_project
+
+
