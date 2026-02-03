@@ -1,4 +1,4 @@
-                    **📊 Ferns and Petals Sales Analysis Dashboard**
+**📊 Ferns and Petals Sales Analysis Dashboard**
 
                     
 **🔎 Project Overview**
@@ -9,6 +9,7 @@ The goal is to uncover sales trends, customer behavior, and product performance 
 
 
 **📂 Dataset**
+
 
 The dataset contains order-level details including:
 
@@ -22,6 +23,7 @@ Occasion (Diwali, Holi, Raksha Bandhan, Valentine’s Day, Birthdays, Anniversar
 
 **🛠 Tools & Technologies**
 
+
 Microsoft Excel (Pivot Tables, Slicers, Charts, Conditional Formatting)
 
 Interactive Dashboard Design for real-time analysis
@@ -29,6 +31,7 @@ Interactive Dashboard Design for real-time analysis
 
 
 **📈 Key Features of Dashboard**
+
 
 KPIs at a Glance:
 
@@ -62,6 +65,7 @@ Slicers for filtering by Products, Dates, Occasions, Quarters
 
 **💡 Insights**
 
+
 Sales spike during festivals & special occasions
 
 Certain products & cities consistently generate higher revenue
@@ -73,6 +77,7 @@ Occasion-based revenue helps in targeted marketing campaigns
 
 
 **🚀 Outcome**
+
 
 The dashboard provides a comprehensive, data-driven view of sales performance, enabling:
 
@@ -110,7 +115,9 @@ Ferns and Petals Sales Analysis.xlsx → Excel dashboard with data & visualizati
 
 Peyal Bepari
 🎓 Master’s Student in Control Systems Engineering
+
 🎓 Bachelor’s in Electronics and Instrumentation Engineering
 
 📊 Aspiring Data Analyst / Data Scientist
+
 📍 India
