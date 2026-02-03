@@ -73,11 +73,12 @@ This project focuses on analyzing retail sales and order data from Veranda Store
 
 
 
+
+
 ## Author
 Peyal Bepari  
-Master’s Student – Control Systems Engineering  
-Bachelor’s in Electronics and Instrumentation Engineering  
+Master’s Student – Control Systems Engineering (Jadavpur University)
+Bachelor’s in Electronics and Instrumentation Engineering (Jadavpur University)  
 Aspiring Data Analyst / Data Scientist  
 India
-
 
