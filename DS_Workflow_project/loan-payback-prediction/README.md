@@ -63,10 +63,16 @@ Final conclusion
 
 
 Model	Hyperparameter Tuning	Status
+
 Logistic Regression	✔	Completed
+
 Random Forest	✔	Completed
+
 XGBoost	✔	Completed
+
 CatBoost	✔	Best Model
+
+
 🏆 Best Performing Model
 
 After training and tuning all models, CatBoost achieved the best overall performance with a strong balance between precision and recall, making it ideal for reducing false negatives in loan default prediction.
