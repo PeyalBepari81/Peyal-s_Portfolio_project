@@ -121,16 +121,17 @@ notebook/loan_payback.ipynb
 
 **📊 Results Summary**
 
+Model Performance Comparison
+All models were tuned using RandomizedSearchCV to identify the optimal hyperparameters before evaluation.
+The table below summarizes the performance of each optimized model:
 
-The complete performance comparison table is included in the notebook, along with:
+Model	Validation Accuracy	Precision	Recall	F1-Score	ROC–AUC	Test Accuracy	Key Strength
+Logistic Regression	0.8571	0.9394	0.8777	0.9075	0.911	0.8269	Simple baseline, high precision
+Random Forest	0.8812	0.9273	0.9238	0.9255	0.907	0.8151	Higher recall than LR, fewer false negatives
+XGBoost	0.8788	0.9285	0.9191	0.9237	0.907	0.8215	Balanced precision & recall, stable boosting
+CatBoost	0.8899	0.9240	0.9395	0.9316	0.911	0.8148	Best recall & lowest false negatives
 
-Confusion Matrix
 
-Classification Report
-
-ROC–AUC score comparison
-
-Key strengths and weaknesses of each model
 
 **🔮 Future Improvements**
 
