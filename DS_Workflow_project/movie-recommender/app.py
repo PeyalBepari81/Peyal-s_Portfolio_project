@@ -9,62 +9,33 @@ st.set_page_config(page_title="Movie Recommender", layout="wide")
 if "current_movie" not in st.session_state:
     st.session_state.current_movie = None
 
-# ---------------- CUSTOM CSS ----------------
+# ---------------- CUSTOM CSS (NETFLIX STYLE) ----------------
 st.markdown("""
 <style>
-
-/* GLOBAL */
-html, body, [data-testid="stAppViewContainer"] {
-    background-color: #0b0b0b;
-    color: white;
-    font-family: 'Segoe UI', sans-serif;
+body {
+    background-color: #0e1117;
 }
-
-/* TITLE */
+.main {
+    background-color: #0e1117;
+}
 h1 {
     text-align: center;
     color: #E50914;
-    font-size: 52px;
+    font-size: 50px;
 }
-
-/* SEARCH HEADING */
-.search-heading {
+.movie-card {
+    background-color: #1c1c1c;
+    padding: 15px;
+    border-radius: 10px;
     text-align: center;
     color: white;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-/* WHITE SEARCH BOX */
-div[data-baseweb="select"] > div {
-    background-color: white !important;
-    border: 2px solid #E50914 !important;
-    border-radius: 10px !important;
-}
-
-/* TEXT */
-div[data-baseweb="select"] span {
-    color: black !important;
-}
-
-/* MOVIE BUTTON STYLE */
-.stButton > button {
-    background-color: #141414;
-    color: white;
-    border-radius: 10px;
-    border: 1px solid #333;
-    height: 120px;
-    width: 100%;
     font-weight: bold;
     transition: 0.3s;
 }
-
-.stButton > button:hover {
-    background-color: #1f1f1f;
-    border: 1px solid #E50914;
+.movie-card:hover {
     transform: scale(1.05);
+    background-color: #292929;
 }
-
 </style>
 """, unsafe_allow_html=True)
 
@@ -80,34 +51,51 @@ def recommend(movie):
 
 # ---------------- UI ----------------
 
+# Title
 st.markdown("<h1>🎬 Movie Recommender</h1>", unsafe_allow_html=True)
-st.markdown("<div class='search-heading'>🔍 Search Movie</div>", unsafe_allow_html=True)
 
-# SEARCH BOX
-selected_movie = st.selectbox(
-    "",
-    movies['title'].values,
-    index=None,
-    placeholder="Type movie name like Avatar..."
-)
-
-# Update current movie
-if selected_movie:
-    st.session_state.current_movie = selected_movie
+st.markdown("<p style='text-align:center; color:white;'>Find movies similar to your favorite ones</p>", unsafe_allow_html=True)
 
 st.markdown("---")
 
-# ---------------- SHOW RECOMMENDATIONS ----------------
-if st.session_state.current_movie:
+# Dropdown centered
+col1, col2, col3 = st.columns([1,2,1])
 
-    st.markdown(f"### 🎥 Showing recommendations for: **{st.session_state.current_movie}**")
+with col2:
+    selected_movie = st.selectbox(
+        "🎥 Select a Movie",
+        movies['title'].values
+    )
+
+# Button centered
+col1, col2, col3 = st.columns([1,1,1])
+
+with col2:
+    recommend_btn = st.button("🚀 Recommend Movies")
+
+st.markdown("---")
+
+# ---------------- RESULTS ----------------
+if recommend_btn:
+    st.session_state.current_movie = selected_movie
+
+# Show recommendations if movie exists
+if st.session_state.current_movie:
 
     recommendations = recommend(st.session_state.current_movie)
 
-    cols = st.columns(5)
+    st.markdown(f"<h3 style='color:white;'>Top Recommendations for {st.session_state.current_movie}</h3>", unsafe_allow_html=True)
+
+    col1, col2, col3, col4, col5 = st.columns(5)
+    cols = [col1, col2, col3, col4, col5]
 
     for i in range(5):
         with cols[i]:
-            if st.button(recommendations[i], key=recommendations[i]):
+            # CLICKABLE BUTTON instead of static card
+            if st.button(recommendations[i], key=f"{recommendations[i]}_{i}"):
                 st.session_state.current_movie = recommendations[i]
-                st.rerun()
+                st.experimental_rerun()
+
+# ---------------- FOOTER ----------------
+st.markdown("---")
+st.markdown("<p style='text-align:center; color:gray;'>Made with ❤️ using Streamlit</p>", unsafe_allow_html=True)
