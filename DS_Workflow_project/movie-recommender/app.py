@@ -5,23 +5,23 @@ import pandas as pd
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(page_title="Movie Recommender", layout="wide")
 
-# ---------------- CUSTOM CSS (NETFLIX STYLE) ----------------
+# ---------------- CUSTOM CSS ----------------
 st.markdown("""
 <style>
 
-/* ----------- GLOBAL BACKGROUND ----------- */
+/* -------- GLOBAL -------- */
 html, body, [data-testid="stAppViewContainer"] {
     background-color: #0b0b0b;
     color: white;
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Remove white top padding */
+/* Remove padding */
 .block-container {
     padding-top: 1rem;
 }
 
-/* ----------- TITLE ----------- */
+/* -------- TITLE -------- */
 h1 {
     text-align: center;
     color: #E50914;
@@ -29,7 +29,7 @@ h1 {
     font-weight: bold;
 }
 
-/* ----------- SUBTITLE ----------- */
+/* -------- SUBTITLE -------- */
 .search-title {
     text-align: center;
     color: #b3b3b3;
@@ -37,24 +37,38 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* ----------- SELECT BOX ----------- */
+/* -------- SEARCH BOX (BRIGHT) -------- */
 div[data-baseweb="select"] > div {
-    background-color: #1a1a1a !important;
-    border-radius: 8px !important;
-    border: 1px solid #333 !important;
+    background-color: #262626 !important;
+    border: 2px solid #E50914 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
 }
 
 div[data-baseweb="select"] span {
     color: white !important;
+    font-weight: 500;
 }
 
-/* Dropdown menu options */
+/* Hover */
+div[data-baseweb="select"]:hover > div {
+    background-color: #2f2f2f !important;
+    border: 2px solid #ff1e1e !important;
+}
+
+/* Focus glow */
+div[data-baseweb="select"]:focus-within > div {
+    border: 2px solid #ff1e1e !important;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+}
+
+/* Dropdown */
 ul[role="listbox"] {
     background-color: #1a1a1a !important;
-    color: white !important;
+    border: 1px solid #E50914;
 }
 
-/* ----------- MOVIE CARDS ----------- */
+/* -------- MOVIE CARDS -------- */
 .movie-card {
     background-color: #141414;
     padding: 20px;
@@ -67,7 +81,7 @@ ul[role="listbox"] {
     border: 1px solid #222;
 }
 
-/* Hover animation */
+/* Hover effect */
 .movie-card:hover {
     transform: scale(1.08);
     background-color: #1f1f1f;
@@ -75,21 +89,7 @@ ul[role="listbox"] {
     box-shadow: 0 4px 20px rgba(229,9,20,0.3);
 }
 
-/* ----------- BUTTON ----------- */
-.stButton > button {
-    background-color: #E50914;
-    color: white;
-    border-radius: 8px;
-    border: none;
-    font-weight: bold;
-    padding: 10px 20px;
-}
-
-.stButton > button:hover {
-    background-color: #b20710;
-}
-
-/* ----------- FOOTER ----------- */
+/* -------- FOOTER -------- */
 .footer {
     text-align: center;
     color: gray;
@@ -97,7 +97,7 @@ ul[role="listbox"] {
     font-size: 14px;
 }
 
-/* ----------- SCROLLBAR (optional cool effect) ----------- */
+/* -------- SCROLLBAR -------- */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -116,26 +116,23 @@ ul[role="listbox"] {
 movies = pickle.load(open('DS_Workflow_project/movie-recommender/movies.pkl', 'rb'))
 similarity = pickle.load(open('DS_Workflow_project/movie-recommender/similarity_reduced.pkl', 'rb'))
 
-# ---------------- RECOMMEND FUNCTION (UPDATED) ----------------
+# ---------------- RECOMMEND FUNCTION ----------------
 def recommend(movie):
     index = movies[movies['title'] == movie].index[0]
-    
-    # already sorted in reduced file
-    movies_list = similarity[index][:5]
-    
+    movies_list = similarity[index][:5]   # already sorted
     return [movies.iloc[i[0]].title for i in movies_list]
 
 # ---------------- UI ----------------
 
 # Title
 st.markdown("<h1>🎬 Movie Recommender</h1>", unsafe_allow_html=True)
-st.markdown("<p class='search-title'>Find movies similar to your favorite ones</p>", unsafe_allow_html=True)
+st.markdown("<p class='search-title'>Discover movies you'll love</p>", unsafe_allow_html=True)
 
 st.markdown("---")
 
-# 🔍 SEARCH BOX (better UX)
+# 🔍 SEARCH BOX
 selected_movie = st.selectbox(
-    "🔍 Search for a movie",
+    "🔍 Search Movie (Start typing...)",
     movies['title'].values,
     index=None,
     placeholder="Type movie name like Avatar, Batman..."
@@ -143,7 +140,7 @@ selected_movie = st.selectbox(
 
 st.markdown("---")
 
-# ---------------- RESULTS (AUTO, NO BUTTON) ----------------
+# ---------------- RESULTS ----------------
 if selected_movie:
 
     with st.spinner("Finding best movies for you..."):
@@ -164,4 +161,4 @@ if selected_movie:
 
 # ---------------- FOOTER ----------------
 st.markdown("---")
-st.markdown("<p style='text-align:center; color:gray;'>Made with ❤️ using Streamlit</p>", unsafe_allow_html=True)
+st.markdown("<p class='footer'>Made with ❤️ using Streamlit</p>", unsafe_allow_html=True)
