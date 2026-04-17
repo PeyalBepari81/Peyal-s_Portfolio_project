@@ -18,7 +18,6 @@ Download dataset from Kaggle:
 
 ---
 
----
 
 ##  Live Demo
 
