@@ -19,17 +19,23 @@ h1 {
     color: #E50914;
     font-size: 50px;
 }
+.search-title {
+    text-align:center;
+    color:white;
+    font-size:22px;
+}
 .movie-card {
-    background-color: #1c1c1c;
-    padding: 15px;
-    border-radius: 10px;
+    background-color: #141414;
+    padding: 20px;
+    border-radius: 12px;
     text-align: center;
     color: white;
     font-weight: bold;
     transition: 0.3s;
+    height: 120px;
 }
 .movie-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
     background-color: #292929;
 }
 </style>
@@ -39,12 +45,12 @@ h1 {
 movies = pickle.load(open('DS_Workflow_project/movie-recommender/movies.pkl', 'rb'))
 similarity = pickle.load(open('DS_Workflow_project/movie-recommender/similarity_reduced.pkl', 'rb'))
 
-# ---------------- RECOMMEND FUNCTION ----------------
+# ---------------- RECOMMEND FUNCTION (UPDATED) ----------------
 def recommend(movie):
     index = movies[movies['title'] == movie].index[0]
-    distances = similarity[index]
     
-    movies_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[1:6]
+    # already sorted in reduced file
+    movies_list = similarity[index][:5]
     
     return [movies.iloc[i[0]].title for i in movies_list]
 
@@ -52,34 +58,28 @@ def recommend(movie):
 
 # Title
 st.markdown("<h1>🎬 Movie Recommender</h1>", unsafe_allow_html=True)
-
-st.markdown("<p style='text-align:center; color:white;'>Find movies similar to your favorite ones</p>", unsafe_allow_html=True)
-
-st.markdown("---")
-
-# Dropdown centered
-col1, col2, col3 = st.columns([1,2,1])
-
-with col2:
-    selected_movie = st.selectbox(
-        "🎥 Select a Movie",
-        movies['title'].values
-    )
-
-# Button centered
-col1, col2, col3 = st.columns([1,1,1])
-
-with col2:
-    recommend_btn = st.button("🚀 Recommend Movies")
+st.markdown("<p class='search-title'>Find movies similar to your favorite ones</p>", unsafe_allow_html=True)
 
 st.markdown("---")
 
-# ---------------- RESULTS ----------------
-if recommend_btn:
-    recommendations = recommend(selected_movie)
-    
+# 🔍 SEARCH BOX (better UX)
+selected_movie = st.selectbox(
+    "🔍 Search for a movie",
+    movies['title'].values,
+    index=None,
+    placeholder="Type movie name like Avatar, Batman..."
+)
+
+st.markdown("---")
+
+# ---------------- RESULTS (AUTO, NO BUTTON) ----------------
+if selected_movie:
+
+    with st.spinner("Finding best movies for you..."):
+        recommendations = recommend(selected_movie)
+
     st.markdown("<h3 style='color:white;'>Top Recommendations</h3>", unsafe_allow_html=True)
-    
+
     col1, col2, col3, col4, col5 = st.columns(5)
     cols = [col1, col2, col3, col4, col5]
 
