@@ -12,6 +12,14 @@ The goal of this project is to understand how Natural Language Processing (NLP) 
 
 ---
 
+## Dataset Source
+Download dataset from Kaggle:
+👉 https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+
+---
+
+---
+
 ##  Live Demo
 
 👉 https://peyal-sportfolioproject-pahy3f9buhwqpw47xcaiiz.streamlit.app/
