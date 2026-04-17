@@ -5,10 +5,6 @@ import pandas as pd
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(page_title="Movie Recommender", layout="wide")
 
-# ---------------- SESSION STATE ----------------
-if "current_movie" not in st.session_state:
-    st.session_state.current_movie = None
-
 # ---------------- CUSTOM CSS (NETFLIX STYLE) ----------------
 st.markdown("""
 <style>
@@ -46,7 +42,10 @@ similarity = pickle.load(open('DS_Workflow_project/movie-recommender/similarity_
 # ---------------- RECOMMEND FUNCTION ----------------
 def recommend(movie):
     index = movies[movies['title'] == movie].index[0]
-    movies_list = similarity[index][:5]
+    distances = similarity[index]
+    
+    movies_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[1:6]
+    
     return [movies.iloc[i[0]].title for i in movies_list]
 
 # ---------------- UI ----------------
@@ -77,24 +76,20 @@ st.markdown("---")
 
 # ---------------- RESULTS ----------------
 if recommend_btn:
-    st.session_state.current_movie = selected_movie
-
-# Show recommendations if movie exists
-if st.session_state.current_movie:
-
-    recommendations = recommend(st.session_state.current_movie)
-
-    st.markdown(f"<h3 style='color:white;'>Top Recommendations for {st.session_state.current_movie}</h3>", unsafe_allow_html=True)
-
+    recommendations = recommend(selected_movie)
+    
+    st.markdown("<h3 style='color:white;'>Top Recommendations</h3>", unsafe_allow_html=True)
+    
     col1, col2, col3, col4, col5 = st.columns(5)
     cols = [col1, col2, col3, col4, col5]
 
     for i in range(5):
         with cols[i]:
-            # CLICKABLE BUTTON instead of static card
-            if st.button(recommendations[i], key=f"{recommendations[i]}_{i}"):
-                st.session_state.current_movie = recommendations[i]
-                st.experimental_rerun()
+            st.markdown(f"""
+            <div class="movie-card">
+                🎥 {recommendations[i]}
+            </div>
+            """, unsafe_allow_html=True)
 
 # ---------------- FOOTER ----------------
 st.markdown("---")
