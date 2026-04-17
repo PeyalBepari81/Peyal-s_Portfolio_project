@@ -97,13 +97,12 @@ Example:
 ---
 
 ##  Project Structure
-movie-recommender/
-│
-├── app.py
-├── movies.pkl
-├── similarity_reduced.pkl
-├── requirements.txt
-└── README.md
+movie-recommender
+app.py
+movies.pkl
+similarity_reduced.pkl
+requirements.txt
+README.md
 
 
 ---
