@@ -8,36 +8,107 @@ st.set_page_config(page_title="Movie Recommender", layout="wide")
 # ---------------- CUSTOM CSS (NETFLIX STYLE) ----------------
 st.markdown("""
 <style>
-body {
-    background-color: #0e1117;
+
+/* ----------- GLOBAL BACKGROUND ----------- */
+html, body, [data-testid="stAppViewContainer"] {
+    background-color: #0b0b0b;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
 }
-.main {
-    background-color: #0e1117;
+
+/* Remove white top padding */
+.block-container {
+    padding-top: 1rem;
 }
+
+/* ----------- TITLE ----------- */
 h1 {
     text-align: center;
     color: #E50914;
-    font-size: 50px;
+    font-size: 52px;
+    font-weight: bold;
 }
+
+/* ----------- SUBTITLE ----------- */
 .search-title {
-    text-align:center;
-    color:white;
-    font-size:22px;
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
+
+/* ----------- SELECT BOX ----------- */
+div[data-baseweb="select"] > div {
+    background-color: #1a1a1a !important;
+    border-radius: 8px !important;
+    border: 1px solid #333 !important;
+}
+
+div[data-baseweb="select"] span {
+    color: white !important;
+}
+
+/* Dropdown menu options */
+ul[role="listbox"] {
+    background-color: #1a1a1a !important;
+    color: white !important;
+}
+
+/* ----------- MOVIE CARDS ----------- */
 .movie-card {
     background-color: #141414;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
     color: white;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
     height: 120px;
+    border: 1px solid #222;
 }
+
+/* Hover animation */
 .movie-card:hover {
     transform: scale(1.08);
-    background-color: #292929;
+    background-color: #1f1f1f;
+    border: 1px solid #E50914;
+    box-shadow: 0 4px 20px rgba(229,9,20,0.3);
 }
+
+/* ----------- BUTTON ----------- */
+.stButton > button {
+    background-color: #E50914;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.stButton > button:hover {
+    background-color: #b20710;
+}
+
+/* ----------- FOOTER ----------- */
+.footer {
+    text-align: center;
+    color: gray;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* ----------- SCROLLBAR (optional cool effect) ----------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0b0b0b;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
