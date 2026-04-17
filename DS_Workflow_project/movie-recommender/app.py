@@ -37,7 +37,7 @@ h1 {
 
 # ---------------- LOAD DATA ----------------
 movies = pickle.load(open('movies.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+similarity = pickle.load(open('similarity_reduced.pkl', 'rb'))
 
 # ---------------- RECOMMEND FUNCTION ----------------
 def recommend(movie):
