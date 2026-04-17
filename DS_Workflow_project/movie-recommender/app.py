@@ -36,8 +36,8 @@ h1 {
 """, unsafe_allow_html=True)
 
 # ---------------- LOAD DATA ----------------
-movies = pickle.load(open('movies.pkl', 'rb'))
-similarity = pickle.load(open('similarity_reduced.pkl', 'rb'))
+movies = pickle.load(open('DS_Workflow_project/movie-recommender/movies.pkl', 'rb'))
+similarity = pickle.load(open('DS_Workflow_project/movie-recommender/similarity_reduced.pkl', 'rb'))
 
 # ---------------- RECOMMEND FUNCTION ----------------
 def recommend(movie):
