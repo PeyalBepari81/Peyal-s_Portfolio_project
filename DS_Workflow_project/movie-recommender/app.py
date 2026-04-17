@@ -16,7 +16,6 @@ html, body, [data-testid="stAppViewContainer"] {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Remove padding */
 .block-container {
     padding-top: 1rem;
 }
@@ -37,35 +36,43 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* -------- SEARCH BOX (BRIGHT) -------- */
+/* -------- CUSTOM SEARCH HEADING -------- */
+.search-heading {
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* -------- WHITE SEARCH BOX -------- */
 div[data-baseweb="select"] > div {
-    background-color: #262626 !important;
+    background-color: #ffffff !important;
     border: 2px solid #E50914 !important;
     border-radius: 10px !important;
     box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
 }
 
 div[data-baseweb="select"] span {
-    color: white !important;
+    color: black !important;
     font-weight: 500;
 }
 
 /* Hover */
 div[data-baseweb="select"]:hover > div {
-    background-color: #2f2f2f !important;
-    border: 2px solid #ff1e1e !important;
+    background-color: #f2f2f2 !important;
 }
 
 /* Focus glow */
 div[data-baseweb="select"]:focus-within > div {
-    border: 2px solid #ff1e1e !important;
+    border: 2px solid #E50914 !important;
     box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
 }
 
 /* Dropdown */
 ul[role="listbox"] {
-    background-color: #1a1a1a !important;
-    border: 1px solid #E50914;
+    background-color: white !important;
+    color: black !important;
 }
 
 /* -------- MOVIE CARDS -------- */
@@ -81,7 +88,6 @@ ul[role="listbox"] {
     border: 1px solid #222;
 }
 
-/* Hover effect */
 .movie-card:hover {
     transform: scale(1.08);
     background-color: #1f1f1f;
@@ -119,7 +125,7 @@ similarity = pickle.load(open('DS_Workflow_project/movie-recommender/similarity_
 # ---------------- RECOMMEND FUNCTION ----------------
 def recommend(movie):
     index = movies[movies['title'] == movie].index[0]
-    movies_list = similarity[index][:5]   # already sorted
+    movies_list = similarity[index][:5]
     return [movies.iloc[i[0]].title for i in movies_list]
 
 # ---------------- UI ----------------
@@ -130,9 +136,12 @@ st.markdown("<p class='search-title'>Discover movies you'll love</p>", unsafe_al
 
 st.markdown("---")
 
-# 🔍 SEARCH BOX
+# 🔍 CUSTOM SEARCH HEADING
+st.markdown("<div class='search-heading'>🔍 Search Movie</div>", unsafe_allow_html=True)
+
+# 🔍 SEARCH BOX (NO LABEL)
 selected_movie = st.selectbox(
-    "🔍 Search Movie (Start typing...)",
+    "",
     movies['title'].values,
     index=None,
     placeholder="Type movie name like Avatar, Batman..."
