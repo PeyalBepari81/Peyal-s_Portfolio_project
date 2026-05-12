@@ -81,7 +81,7 @@ Master’s Student – Control Systems Engineering (Jadavpur University)
 
 Bachelor’s in Electronics and Instrumentation Engineering (Jadavpur University)  
 
-Aspiring Data Analyst / Data Scientist  
+Aspiring Data Analyst  and Data Scientist  
 
 India
 
