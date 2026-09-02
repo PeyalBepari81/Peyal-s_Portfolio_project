@@ -4,7 +4,7 @@
 
 This project analyzes the Brazilian Olist E-Commerce dataset using Microsoft Power BI.
 
-The objective is to transform raw e-commerce data into an interactive Business Intelligence dashboard that provides insights into sales performance, products, customers, payments, sellers, and delivery operations.
+The objective is to transform raw e-commerce data into an interactive Business Intelligence dashboard that provides insights into sales performance, products, customers, sellers, payments, and delivery operations.
 
 The project covers data preparation, data quality assessment, dimensional data modeling, DAX measures, KPI development, interactive visualizations, and business-focused analysis.
 
@@ -414,13 +414,18 @@ Download the file and open it using **Microsoft Power BI Desktop** to explore th
 
 ## Project Structure
 
+```text
 Olist_PowerBi_Analysis/
 │
 ├── README.md
 │
 └── olist.pbix
+```
+
+---
 
 ## Skills Demonstrated
+
 - Power BI
 - Power Query
 - DAX
@@ -432,6 +437,7 @@ Olist_PowerBi_Analysis/
 - Sales Analysis
 - Product Analysis
 - Customer Analysis
+- Seller Analysis
 - Payment Analysis
 - Logistics Analysis
 - Delivery Performance Analysis
@@ -439,7 +445,7 @@ Olist_PowerBi_Analysis/
 - Interactive Dashboard Design
 - Business Analysis
 
-
+---
 
 ## Project Outcome
 
@@ -447,10 +453,10 @@ This project demonstrates an end-to-end Business Intelligence workflow using Pow
 
 The project covers the process from raw e-commerce data and data-quality assessment through data modeling, DAX development, KPI creation, interactive visualization, and business analysis.
 
-The final dashboard brings together sales, product, customer, payment, and logistics information into a single interactive analytical solution designed to support business decision-making.
+The final dashboard brings together sales, product, customer, seller, payment, and logistics information into a single interactive analytical solution designed to support business decision-making.
 
+---
 
 ## Author
 
 **Peyal Bepari**
-
