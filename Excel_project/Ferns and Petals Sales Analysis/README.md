@@ -159,7 +159,6 @@ Ferns and Petals Sales Analysis.xlsx → Excel dashboard with data & visualizati
 Peyal Bepari  
 Master’s Student – Control Systems Engineering (Jadavpur University)
 
-
 Bachelor’s in Electronics and Instrumentation Engineering (Jadavpur University)  
 
 
