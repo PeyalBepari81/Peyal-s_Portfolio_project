@@ -414,7 +414,6 @@ Download the file and open it using **Microsoft Power BI Desktop** to explore th
 
 ## Project Structure
 
-```text
 Olist_PowerBi_Analysis/
 │
 ├── README.md
@@ -422,7 +421,6 @@ Olist_PowerBi_Analysis/
 └── olist.pbix
 
 ## Skills Demonstrated
-
 - Power BI
 - Power Query
 - DAX
@@ -441,7 +439,7 @@ Olist_PowerBi_Analysis/
 - Interactive Dashboard Design
 - Business Analysis
 
----
+
 
 ## Project Outcome
 
@@ -451,7 +449,6 @@ The project covers the process from raw e-commerce data and data-quality assessm
 
 The final dashboard brings together sales, product, customer, payment, and logistics information into a single interactive analytical solution designed to support business decision-making.
 
----
 
 ## Author
 
