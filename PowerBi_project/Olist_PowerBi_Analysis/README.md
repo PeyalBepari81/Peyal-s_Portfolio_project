@@ -4,7 +4,7 @@
 
 This project analyzes the Brazilian Olist E-Commerce dataset using Microsoft Power BI.
 
-The objective is to transform raw e-commerce data into an interactive Business Intelligence dashboard that provides insights into sales performance, products, customers, payments, and delivery operations.
+The objective is to transform raw e-commerce data into an interactive Business Intelligence dashboard that provides insights into sales performance, products, customers, payments, sellers, and delivery operations.
 
 The project covers data preparation, data quality assessment, dimensional data modeling, DAX measures, KPI development, interactive visualizations, and business-focused analysis.
 
@@ -180,14 +180,20 @@ For repeat-customer analysis, `customer_unique_id` was used because it represent
 The Power BI report contains four main analytical pages.
 
 ### Executive Overview
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/eb06a0e1-f0b5-4ca4-8d95-6722a8675a17" />
-### Sales & Product Analysis
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8212fe8e-7597-4367-bc70-8d06f00aee49" />
-### Customer Analysis
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a0b25158-41ca-46a0-832d-ac6bbaf6dc2a" />
-### Logistics & Delivery Analysis
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1e1edda7-cb81-4036-9d8b-c47136852585" />
 
+<img width="1920" height="1080" alt="Executive Overview" src="https://github.com/user-attachments/assets/eb06a0e1-f0b5-4ca4-8d95-6722a8675a17" />
+
+### Sales & Product Analysis
+
+<img width="1920" height="1080" alt="Sales & Product Analysis" src="https://github.com/user-attachments/assets/8212fe8e-7597-4367-bc70-8d06f00aee49" />
+
+### Customer & Seller Analysis
+
+<img width="1920" height="1080" alt="Customer & Seller Analysis" src="https://github.com/user-attachments/assets/046afad6-7f7f-442c-9da0-ac6450e2d680" />
+
+### Logistics & Delivery Analysis
+
+<img width="1920" height="1080" alt="Logistics & Delivery Analysis" src="https://github.com/user-attachments/assets/1e1edda7-cb81-4036-9d8b-c47136852585" />
 
 ---
 
@@ -230,16 +236,17 @@ This page focuses on sales performance and product-level analysis.
 - Revenue performance
 - Category-level sales
 - Order and item performance
+- Sales by seller state
 
-This page helps identify the products and categories contributing to overall business performance.
+This page helps identify the products, categories, and seller locations contributing to overall business performance.
 
 ---
 
-## 3. Customer Analysis
+## 3. Customer & Seller Analysis
 
-This page focuses on customer behavior and purchasing patterns.
+This page focuses on customer purchasing behavior and seller performance.
 
-### Analysis Areas
+### Customer Analysis
 
 - Total customers
 - Customer distribution
@@ -248,8 +255,17 @@ This page focuses on customer behavior and purchasing patterns.
 - Customer purchasing behavior
 - Customer geographic distribution
 - Customer order frequency
+- One-time customers and repeat customers
+
+### Seller Analysis
+
+- Total sellers
+- Average sales per seller
+- Top 10 sellers by orders
 
 The customer-order distribution analysis helps identify differences between one-time and repeat purchasing behavior.
+
+Seller analysis helps identify seller participation and the sellers generating the highest order volumes.
 
 ---
 
@@ -284,6 +300,9 @@ The dashboard includes DAX measures for KPI reporting and business analysis.
 - Average Order Value (AOV)
 - Revenue
 - Total Customers
+- Total Sellers
+- Average Sales per Seller
+- Orders by Seller
 - Repeat Customers
 - Sales YTD
 - Previous Year Sales
@@ -295,6 +314,7 @@ These measures support:
 - Time-series analysis
 - Year-over-year comparisons
 - Customer analysis
+- Seller analysis
 - Sales analysis
 - Interactive filtering
 - Business performance evaluation
@@ -316,6 +336,9 @@ The dashboard was designed to answer important business questions such as:
 - Where are delivery delays occurring?
 - How does freight value contribute to order cost?
 - What patterns can be identified in customer purchasing behavior?
+- How many sellers are active in the marketplace?
+- Which sellers generate the highest number of orders?
+- How does sales performance vary across sellers?
 - What areas of the business require further investigation?
 
 ---
@@ -333,6 +356,10 @@ Product and category performance was analyzed to identify high-performing catego
 ### Customer Analysis
 
 Customer purchasing behavior was analyzed using order frequency, customer distribution, and repeat-purchase behavior.
+
+### Seller Analysis
+
+Seller performance was analyzed using seller count, average sales per seller, and the top sellers by order volume.
 
 ### Payment Analysis
 
@@ -356,6 +383,7 @@ The Power BI dashboard provides interactive analysis through:
 - Time-based analysis
 - Geographic analysis
 - Customer analysis
+- Seller analysis
 - Product analysis
 - Payment analysis
 - Logistics analysis
