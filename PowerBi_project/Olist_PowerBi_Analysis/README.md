@@ -179,11 +179,13 @@ For repeat-customer analysis, `customer_unique_id` was used because it represent
 
 The Power BI report contains four main analytical pages.
 
+### Executive Overview
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/eb06a0e1-f0b5-4ca4-8d95-6722a8675a17" />
-
+### Sales & Product Analysis
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8212fe8e-7597-4367-bc70-8d06f00aee49" />
-
+### Customer Analysis
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a0b25158-41ca-46a0-832d-ac6bbaf6dc2a" />
+### Logistics & Delivery Analysis
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1e1edda7-cb81-4036-9d8b-c47136852585" />
 
 
